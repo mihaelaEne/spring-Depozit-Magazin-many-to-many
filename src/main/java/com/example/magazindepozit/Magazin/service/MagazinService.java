@@ -65,7 +65,7 @@ public class MagazinService {
 
     @Transactional
     public void updateMagazin(UpdateMagazinRequest updateMagazinRequest) {
-        Optional<Magazin> magazinOptional = magazinRepo.findMagazinByNumaMallString(updateMagazinRequest.getNumeMall());
+        Optional<Magazin> magazinOptional = magazinRepo.findMagazinByNume(updateMagazinRequest.getName());
 
         if (magazinOptional.isPresent()) {
             Magazin magazin = magazinOptional.get();

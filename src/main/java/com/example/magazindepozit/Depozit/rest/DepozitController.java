@@ -40,7 +40,7 @@ public class DepozitController {
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<Void>deleteById(@PathVariable long id){
         depozitService.deleteDepozit(id);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);

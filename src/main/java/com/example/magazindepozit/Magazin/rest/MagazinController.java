@@ -39,7 +39,7 @@ public class MagazinController {
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 
-    @DeleteMapping
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<Void>deleteById(@PathVariable long id){
         magazinService.deleteMagazin(id);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
