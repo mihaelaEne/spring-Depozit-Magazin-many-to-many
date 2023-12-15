@@ -36,7 +36,7 @@ public class Depozit {
     @JsonManagedReference
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(
-            name = "magazin",
+            name = "joinTbDepozitMagazin",
             joinColumns = @JoinColumn(name = "depozit_id"),
             inverseJoinColumns = @JoinColumn(name = "magazin_id")
     )
